@@ -1,7 +1,13 @@
 /**
- * Reprenez HelloUniverse.java et faites en sortes que la variable qui représente
- * le nombre de planètes passe de 8 à 9 entre les 2 affichages grâce à l'opérateur d'incrémentation.
- * Corrigé Exercice de codage 4 : Le cas de pluton Version 3 - Incrémenter le nombre de planètes
+ * Le cas de Pluton Version 4 - Opérateur de concaténation
+ *
+ * Reprenez HelloUniverse.java et faites en sortes de réduire à 2 lignes l'ensemble du texte affiché à l'écran, 
+ * en concaténant le texte et le nombre de planètes sur une seule ligne à chaque fois :
+ *
+ * Aux dernières nouvelles, le nombre total de planètes dans le système solaire est de : 8
+ * Il y a quelques années cependant, elles étaient au nombre de : 9
+ *
+ * Vous n'utiliserez donc plus que 2 System.out.println
  */
 
 public class HelloUniverse {
@@ -11,13 +17,10 @@ public class HelloUniverse {
      * @param args arguments passés au programme
      */
     public static void main(String... args) {
-        String messageDebut = "Aux dernières nouvelles, le nombre total de planètes dans le système solaire est de : ";
-        System.out.println(messageDebut);
         int nombrePlanetes = 8;
-        System.out.println(nombrePlanetes);
+        String messageDebut = "Aux dernières nouvelles, le nombre total de planètes dans le système solaire est de : ";
         String messageSuite = "Il y a quelques années cependant, elles étaient au nombre de : ";
-        System.out.println(messageSuite);
-        nombrePlanetes++;
-        System.out.println(nombrePlanetes);
-    }
+        System.out.println(messageDebut + nombrePlanetes);
+        System.out.println(messageSuite + (++nombrePlanetes));
+        }
 }
