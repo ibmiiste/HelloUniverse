@@ -1,6 +1,7 @@
 /**
  * Reprenez HelloUniverse.java et faites en sortes que la variable qui représente
  * le nombre de planètes passe de 8 à 9 entre les 2 affichages grâce à l'opérateur d'incrémentation.
+ * Corrigé Exercice de codage 4 : Le cas de pluton Version 3 - Incrémenter le nombre de planètes
  */
 
 public class HelloUniverse {
