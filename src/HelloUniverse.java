@@ -1,15 +1,27 @@
 /**
- * Utiliser if et else
+ * Utiliser if, else if et else
  *
- * Reprenez le code précédent.
+ * Notre code n’est pas tout à fait correct fonctionnellement. 
  *
- * Vous avez utilisé tout à l’heure le mot clé if 2 fois dans votre code 
- * pour déterminer la valeur du nombre de planètes en fonction de l’année choisie.
+ * En réalité personne ne sait si les scientifiques ne changeront pas d’avis dans le futur 
+ * et excluront pourquoi pas Mercure du rang de planète.
  *
- * Or en réalité dans le cas présent il n’y a qu’une seule alternative. 
- * Soit on se trouve avant 2006 soit on est dans le cas contraire.
+ * De la même manière, les planètes n’ont pas toutes été découvertes d’un coup, 
+ * Uranus par exemple fut découverte au 17ème siècle et Neptune au 18ème.
+ * *
+ * On va améliorer notre code de manière à restreindre notre gamme de valeurs acceptables. 
+ * On acceptera des valeurs à partir de l’an 1600 et jusqu’à disons 2020 incluse.
  *
- * Simplifier l’écriture de votre code grâce au mot clé else.
+ * Dans le cas contraire, il faudra alors afficher le message :
+ *
+ * Le programme ne peut pas fournir de résultat pour l'année <année>
+ *
+ * Si en revanche l'année choisi est acceptable, 
+ * alors on va également considérer les 2 cas supplémentaires qui corresponde à la découverte de Uranus et Neptune.
+ *
+ * Si l'année est inférieure à 1700 alors le nombre de planètes est de 7
+ *
+ * Sinon si l'année est inférieure à 1800 alors le nombre de planètes est de 8
  */
 
 public class HelloUniverse {
@@ -20,14 +32,25 @@ public class HelloUniverse {
      */
     public static void main(String... args) {
         int nombrePlanetes = 8;
-        int annee = 2006;
+        int annee = 2019;
 
-        if (annee < 2006) {
-            nombrePlanetes = 9;
-        } else {
-            nombrePlanetes = 8;
+        if (annee < 1600 || annee >=2020) {
+            System.out.println("Le programme ne peut pas fournir de résultat pour l'année " + annee);
+        } else
+        { if (annee<1700){
+            nombrePlanetes = 7;
+        }
+        else if (annee<1800){
+            nombrePlanetes=8;
+        }
+        else if (annee<2006) {
+            nombrePlanetes=9;
+        }
+        else {
+            nombrePlanetes=8;
         }
 
-        System.out.printf("En %d , les planètes du système solaire étaient au nombre de : %d",annee,nombrePlanetes);
-        }
-}
+        System.out.println("En " + annee + ", les planètes du système solaire étaient au nombre de : " + nombrePlanetes);
+        }}
+    }
+    
