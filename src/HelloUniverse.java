@@ -1,27 +1,20 @@
 /**
- * Utiliser if, else if et else
+ * Utiliser switch, case et default
  *
- * Notre code n’est pas tout à fait correct fonctionnellement. 
+ * Nous avons déterminé le nombre de planètes dans le système solaire en fonction d'une date (année) donnée.
  *
- * En réalité personne ne sait si les scientifiques ne changeront pas d’avis dans le futur 
- * et excluront pourquoi pas Mercure du rang de planète.
+ * Nous allons maintenant modifier intégralement notre code pour réaliser la démarche inverse, 
+ * c'est à dire afficher à quelle période correspond un nombre de planète donné :
  *
- * De la même manière, les planètes n’ont pas toutes été découvertes d’un coup, 
- * Uranus par exemple fut découverte au 17ème siècle et Neptune au 18ème.
- * *
- * On va améliorer notre code de manière à restreindre notre gamme de valeurs acceptables. 
- * On acceptera des valeurs à partir de l’an 1600 et jusqu’à disons 2020 incluse.
+ *     Pour 7, afficher "On sait qu'au 16ème siècle, seules 7 planètes avaient été découvertes"
  *
- * Dans le cas contraire, il faudra alors afficher le message :
+ *     Pour 8, afficher "On sait que le nombre de planètes est passé de 7 à 8 au 17ème siècle, mais il a également été réduit de 9 à 8 en 2006"
  *
- * Le programme ne peut pas fournir de résultat pour l'année <année>
+ *     Pour 9, afficher "On sait que le nombre de planètes est passé de 8 à 9 au 18ème siècle et ce jusqu'en 2006, où ce nombre a été réduit à 8".
  *
- * Si en revanche l'année choisi est acceptable, 
- * alors on va également considérer les 2 cas supplémentaires qui corresponde à la découverte de Uranus et Neptune.
+ *   Pour tout autre nombre, on va afficher le message "Le programme ne peut pas fournir de résultat pour <nombre>"
  *
- * Si l'année est inférieure à 1700 alors le nombre de planètes est de 7
- *
- * Sinon si l'année est inférieure à 1800 alors le nombre de planètes est de 8
+ * Plutôt que d'utiliser une structure en if - else if - else pour tenir compte de tous les cas possibles, nous allons introduire le switch - case - default .
  */
 
 public class HelloUniverse {
@@ -31,26 +24,23 @@ public class HelloUniverse {
      * @param args arguments passés au programme
      */
     public static void main(String... args) {
-        int nombrePlanetes = 8;
-        int annee = 2019;
+        int nombrePlanetes = 10;
+        
+        switch (nombrePlanetes) {
 
-        if (annee < 1600 || annee >=2020) {
-            System.out.println("Le programme ne peut pas fournir de résultat pour l'année " + annee);
-        } else
-        { if (annee<1700){
-            nombrePlanetes = 7;
+            case 7 : 
+                System.out.println("On sait qu'au 16ème siècle, seules 7 planètes avaient été découvertes");
+                break;
+            case 8 :
+                System.out.println("On sait que le nombre de planètes est passé de 7 à 8 au 17ème siècle, mais il a également été réduit de 9 à 8 en 2006");
+                break;
+            case 9 :
+                System.out.println("On sait que le nombre de planètes est passé de 8 à 9 au 18ème siècle et ce jusqu'en 2006, où ce nombre a été réduit à 8");
+                break;
+            default:
+                System.out.println("Le programme ne peut pas fournir de résultat pour le nombre " + nombrePlanetes);
+                break;
         }
-        else if (annee<1800){
-            nombrePlanetes=8;
-        }
-        else if (annee<2006) {
-            nombrePlanetes=9;
-        }
-        else {
-            nombrePlanetes=8;
-        }
-
-        System.out.println("En " + annee + ", les planètes du système solaire étaient au nombre de : " + nombrePlanetes);
-        }}
     }
+}
     
