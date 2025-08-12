@@ -1,20 +1,14 @@
 /**
- * Utiliser switch, case et default
+ * La structure itérative avec le mot clé for
  *
- * Nous avons déterminé le nombre de planètes dans le système solaire en fonction d'une date (année) donnée.
+ * Dans cette nouvelle étape des travaux pratiques, nous allons maintenant résumer dans un petit paragraphe 
+ * les informations que nous connaissons du système solaire.
  *
- * Nous allons maintenant modifier intégralement notre code pour réaliser la démarche inverse, 
- * c'est à dire afficher à quelle période correspond un nombre de planète donné :
+ * Nous allons afficher successivement le texte qui correspond à 7 planètes puis celui qui correspond à 8 planètes et enfin celui qui correspond à 9 planètes.
  *
- *     Pour 7, afficher "On sait qu'au 16ème siècle, seules 7 planètes avaient été découvertes"
+ * Nous allons utiliser une boucle for pour itérer sur les valeurs de 7 à 9 et afficher le texte correspondant à chaque valeur.
  *
- *     Pour 8, afficher "On sait que le nombre de planètes est passé de 7 à 8 au 17ème siècle, mais il a également été réduit de 9 à 8 en 2006"
- *
- *     Pour 9, afficher "On sait que le nombre de planètes est passé de 8 à 9 au 18ème siècle et ce jusqu'en 2006, où ce nombre a été réduit à 8".
- *
- *   Pour tout autre nombre, on va afficher le message "Le programme ne peut pas fournir de résultat pour <nombre>"
- *
- * Plutôt que d'utiliser une structure en if - else if - else pour tenir compte de tous les cas possibles, nous allons introduire le switch - case - default .
+ * Pour ce faire nous allons effectuer une itération de 7 à 9 autour de notre bloc switch grâce au mot clé for .
  */
 
 public class HelloUniverse {
@@ -24,8 +18,8 @@ public class HelloUniverse {
      * @param args arguments passés au programme
      */
     public static void main(String... args) {
-        int nombrePlanetes = 10;
-        
+        int nombrePlanetes = 7;
+        for(;nombrePlanetes<10;nombrePlanetes++){
         switch (nombrePlanetes) {
 
             case 7 : 
@@ -40,6 +34,7 @@ public class HelloUniverse {
             default:
                 System.out.println("Le programme ne peut pas fournir de résultat pour le nombre " + nombrePlanetes);
                 break;
+           }
         }
     }
 }
