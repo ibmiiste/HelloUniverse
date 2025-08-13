@@ -1,14 +1,7 @@
 /**
- * La structure itérative avec le mot clé for
+ * La structure itérative avec le mot clé while
  *
- * Dans cette nouvelle étape des travaux pratiques, nous allons maintenant résumer dans un petit paragraphe 
- * les informations que nous connaissons du système solaire.
- *
- * Nous allons afficher successivement le texte qui correspond à 7 planètes puis celui qui correspond à 8 planètes et enfin celui qui correspond à 9 planètes.
- *
- * Nous allons utiliser une boucle for pour itérer sur les valeurs de 7 à 9 et afficher le texte correspondant à chaque valeur.
- *
- * Pour ce faire nous allons effectuer une itération de 7 à 9 autour de notre bloc switch grâce au mot clé for .
+ * Remplacez maintenant la "boucle" for par l'équivalent à base du mot clé while .
  */
 
 public class HelloUniverse {
@@ -19,7 +12,8 @@ public class HelloUniverse {
      */
     public static void main(String... args) {
         int nombrePlanetes = 7;
-        for(;nombrePlanetes<10;nombrePlanetes++){
+
+        while(nombrePlanetes<10){
         switch (nombrePlanetes) {
 
             case 7 : 
@@ -35,6 +29,7 @@ public class HelloUniverse {
                 System.out.println("Le programme ne peut pas fournir de résultat pour le nombre " + nombrePlanetes);
                 break;
            }
+        nombrePlanetes++;
         }
     }
 }
