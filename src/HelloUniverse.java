@@ -16,7 +16,7 @@
  *   Pour la rotation : Je suis la planète <Nom de la planète> et je tourne sur moi-même. 
  *
  *
- * Faites ensuite tourner Neptune autour de son étoile et Mars autour d'elle-même en invoquant leur méthodes respectives dans le main .
+ * Faites ensuite tourner neptune autour de son étoile et mars autour d'elle-même en invoquant leur méthodes respectives dans le main .
  *
  * Note : Afin que la vérification de la solution depuis la plate-forme Udemy puisse s’exécuter avec succès, 
  * vous devrez utiliser le nom de variable nom pour le nom de la planète.
@@ -30,58 +30,58 @@ public class HelloUniverse {
      * @param args arguments passés au programme
      */
     public static void main(String... args) {
-        Planete Mercure = new Planete();
-        Mercure.nom = "Mercure";
-        Mercure.matiere = "Tellurique";
-        Mercure.diametre = 4880;
+        Planete mercure = new Planete();
+        mercure.nom = "mercure";
+        mercure.matiere = "Tellurique";
+        mercure.diametre = 4880;
 
-        Planete Venus = new Planete();
-        Venus.nom = "Venus";
-        Venus.matiere = "Tellurique";
-        Venus.diametre = 12100;
+        Planete venus = new Planete();
+        venus.nom = "venus";
+        venus.matiere = "Tellurique";
+        venus.diametre = 12100;
 
-        Planete Terre = new Planete();
-        Terre.nom = "Terre";
-        Terre.matiere = "Tellurique";
-        Terre.diametre = 12756;
+        Planete terre = new Planete();
+        terre.nom = "terre";
+        terre.matiere = "Tellurique";
+        terre.diametre = 12756;
 
-        Planete Mars = new Planete();
-        Mars.nom = "Mars";
-        Mars.matiere = "Tellurique";
-        Mars.diametre = 6792;
+        Planete mars = new Planete();
+        mars.nom = "mars";
+        mars.matiere = "Tellurique";
+        mars.diametre = 6792;
 
-        Planete Jupiter = new Planete();
-        Jupiter.nom = "Jupiter";
-        Jupiter.matiere = "Gazeuse";
-        Jupiter.diametre = 142984;
+        Planete jupiter = new Planete();
+        jupiter.nom = "jupiter";
+        jupiter.matiere = "Gazeuse";
+        jupiter.diametre = 142984;
 
-        System.out.println(Jupiter.nom + " est une planète " + Jupiter.matiere + " avec un diamètre de " + Jupiter.diametre + " kilomètres.");
+        System.out.println(jupiter.nom + " est une planète " + jupiter.matiere + " avec un diamètre de " + jupiter.diametre + " kilomètres.");
 
-        Planete Saturne = new Planete();
-        Saturne.nom = "Saturne";
-        Saturne.matiere = "Gazeuse";
-        Saturne.diametre = 120536;
+        Planete saturne = new Planete();
+        saturne.nom = "saturne";
+        saturne.matiere = "Gazeuse";
+        saturne.diametre = 120536;
 
-        Planete Uranus = new Planete();
-        Uranus.nom = "Uranus";
-        Uranus.matiere = "Gazeuse";
-        Uranus.diametre = 51118;
+        Planete uranus = new Planete();
+        uranus.nom = "uranus";
+        uranus.matiere = "Gazeuse";
+        uranus.diametre = 51118;
 
-        Planete Neptune = new Planete();
-        Neptune.nom = "Neptune";
-        Neptune.matiere = "Gazeuse";
-        Neptune.diametre = 49532;
+        Planete neptune = new Planete();
+        neptune.nom = "neptune";
+        neptune.matiere = "Gazeuse";
+        neptune.diametre = 49532;
 
-        Planete Pluton = new Planete();
-        Pluton.nom = "Pluton";
-        Pluton.matiere = "Glace";
-        Pluton.diametre = 2300;
+        Planete pluton = new Planete();
+        pluton.nom = "pluton";
+        pluton.matiere = "Glace";
+        pluton.diametre = 2300;
 
-        Planete PlaneteNeuf = new Planete();
-        System.out.println(PlaneteNeuf.nom + " est une planète " + PlaneteNeuf.matiere + " avec un diamètre de " + PlaneteNeuf.diametre + " kilomètres.");
+        Planete planeteNeuf = new Planete();
+        System.out.println(planeteNeuf.nom + " est une planète " + planeteNeuf.matiere + " avec un diamètre de " + planeteNeuf.diametre + " kilomètres.");
 
-        Neptune.revolution();
-        Mars.rotation();
+        neptune.revolution();
+        mars.rotation();
 
     }
 }
