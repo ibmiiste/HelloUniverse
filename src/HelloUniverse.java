@@ -1,18 +1,25 @@
 /**
- * La planète X - le mot clé null
+ * Rotation des planètes - déclarer et invoquer une méthode
  *
- * Depuis près d'un siècle, les astronomes pensent qu'il existe au moins une planète massive inconnue au delà de Neptune. 
- * On ne connaît ni son diamètre ni de quoi elle est composée. On ne connaît pas même son nom, on l'appelle désormais "planète neuf" 
- * mais elle a eu d'autres noms dans le passé.
- * Voici une petite vidéo sur le sujet pour les passionnés.
+ * Nos planètes ont de nombreuses propriétés mais réalisent également plusieurs "activités" que nous allons matérialiser au travers de méthodes.
  *
- * Instanciez une nouvelle planète sans nom, ni diamètre ni matière. 
- * Affichez ses caractéristiques comme vous l'aviez fait précédemment pour Jupiter.
+ * Par exemple, les planètes effectuent des rotations autour de leur étoile que l'on appelle plus précisément "révolutions" 
+ * et qui correspondent au sens stricte aux années. En effet, une révolution de la terre autour du soleil correspond à une année terrestre.
  *
- * Vous constaterez que la valeur du diamètre non valorisée est alors de 0, valeur par défaut des entiers non valorisés.
+ * Les planètes effectuent également des rotations sur elles-même, que l'on appelle tout simplement "rotation", 
+ * et qui correspondent aux journées. Une rotation de la terre sur elle-même correspond à une journée terrestre.
  *
- * En revanche pour ce qui concerne le nom et la matière, leur valeur est null  et le fait de tenter de la concaténer, 
- * transforme automatique null  en une chaîne de caractères (String ) valant la séquence de 4 lettres "null".
+ * Matérialiser ces 2 mouvements (rotation et révolution) à l'aide de méthodes, ajouter dans le corps de ces méthodes un affichage :
+ *
+ *   Pour la révolution : Je suis la planète <Nom de la planète> et je tourne autour de mon étoile.
+ *
+ *   Pour la rotation : Je suis la planète <Nom de la planète> et je tourne sur moi-même. 
+ *
+ *
+ * Faites ensuite tourner Neptune autour de son étoile et Mars autour d'elle-même en invoquant leur méthodes respectives dans le main .
+ *
+ * Note : Afin que la vérification de la solution depuis la plate-forme Udemy puisse s’exécuter avec succès, 
+ * vous devrez utiliser le nom de variable nom pour le nom de la planète.
  */
  
 
@@ -72,7 +79,10 @@ public class HelloUniverse {
 
         Planete PlaneteNeuf = new Planete();
         System.out.println(PlaneteNeuf.nom + " est une planète " + PlaneteNeuf.matiere + " avec un diamètre de " + PlaneteNeuf.diametre + " kilomètres.");
-        
+
+        Neptune.revolution();
+        Mars.rotation();
+
     }
 }
     
