@@ -1,15 +1,18 @@
 /**
- * Galilée ou la réalité des planètes Version 3 - Premiers Objets
+ * La planète X - le mot clé null
  *
- * Instanciez les planètes du système solaire et attribuez des valeurs à leurs propriétés.
+ * Depuis près d'un siècle, les astronomes pensent qu'il existe au moins une planète massive inconnue au delà de Neptune. 
+ * On ne connaît ni son diamètre ni de quoi elle est composée. On ne connaît pas même son nom, on l'appelle désormais "planète neuf" 
+ * mais elle a eu d'autres noms dans le passé.
+ * Voici une petite vidéo sur le sujet pour les passionnés.
  *
- * Mercure, Venus, la Terre et Mars sont des planètes telluriques, les autres sont gazeuses.
+ * Instanciez une nouvelle planète sans nom, ni diamètre ni matière. 
+ * Affichez ses caractéristiques comme vous l'aviez fait précédemment pour Jupiter.
  *
- * Vous pouvez trouver les diamètres des planètes ici : Diamètre des planètes (ou ici si ca ne fonctionne pas Extrait PDF)
+ * Vous constaterez que la valeur du diamètre non valorisée est alors de 0, valeur par défaut des entiers non valorisés.
  *
- * Supprimez le contenu actuel situé dans le bloc du main , mais ajoutez un affichage (System.out.println ) de la matière et du diamètre de Jupiter sous la forme:
- *
- *       Jupiter est une planète Gazeuse avec un diamètre de 142984 kilomètres.
+ * En revanche pour ce qui concerne le nom et la matière, leur valeur est null  et le fait de tenter de la concaténer, 
+ * transforme automatique null  en une chaîne de caractères (String ) valant la séquence de 4 lettres "null".
  */
  
 
@@ -66,6 +69,10 @@ public class HelloUniverse {
         Pluton.nom = "Pluton";
         Pluton.matiere = "Glace";
         Pluton.diametre = 2300;
+
+        Planete PlaneteNeuf = new Planete();
+        System.out.println(PlaneteNeuf.nom + " est une planète " + PlaneteNeuf.matiere + " avec un diamètre de " + PlaneteNeuf.diametre + " kilomètres.");
+        
     }
 }
     
