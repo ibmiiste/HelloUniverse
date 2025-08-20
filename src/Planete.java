@@ -1,15 +1,5 @@
 /**
- * Galilée ou la réalité des planètes Version 2 - Les attributs / propriétés
- *
- * La planète sera caractérisé pour le moment par 3 propriétés:
- *
- *   Son nom (String )
- *   La matière (String ) qui peut être "Gazeuse" ou "Tellurique"
- *   Le diamètre en kilomètres (long )
- *
- * Note : Évitez les accents dans le nom des variables.
- *
- * Note : Afin que la vérification de la solution depuis la plate-forme Udemy puisse s’exécuter avec succès, vous devrez utiliser les noms de variable : nom , matiere et diametre
+ * Classe représentant une planète.
  */
 public class Planete {
     String nom;
@@ -17,12 +7,15 @@ public class Planete {
     long diametre;   
 
 
-    void revolution() {
-        System.out.println("Je suis la planète " + nom + " et je tourne autour de mon étoile.");
+    int revolution(int angle) {
+        int nombreTour;
+        nombreTour = angle / 360;
+        return nombreTour;
     }
 
-    void rotation() {
-        System.out.println("Je suis la planète " + nom + " et je tourne sur moi-même.");
+    int rotation(int angle) {
+        int nombreTour;
+        nombreTour = angle / 360;
+        return nombreTour;
     }
-
 }
