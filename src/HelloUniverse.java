@@ -1,25 +1,26 @@
 /**
- * Rotation des planètes - déclarer et invoquer une méthode
+ * Indiquer l'angle de rotation - ajouter des arguments et obtenir une valeur de retour
  *
- * Nos planètes ont de nombreuses propriétés mais réalisent également plusieurs "activités" que nous allons matérialiser au travers de méthodes.
+ * Les méthodes que nous venons de créer indiquent qu'une rotation est en cours. Améliorons ces méthodes afin d'indiquer maintenant l'angle de rotation. 
+ * Cet angle peut être positif ou négatif, signifiant le sens de rotation.
  *
- * Par exemple, les planètes effectuent des rotations autour de leur étoile que l'on appelle plus précisément "révolutions" 
- * et qui correspondent au sens stricte aux années. En effet, une révolution de la terre autour du soleil correspond à une année terrestre.
+ * Il peut également dépasser les 360° indiquant que nous souhaitons une rotation de plus d'un tour.
  *
- * Les planètes effectuent également des rotations sur elles-même, que l'on appelle tout simplement "rotation", 
- * et qui correspondent aux journées. Une rotation de la terre sur elle-même correspond à une journée terrestre.
+ * Les méthodes devront également être en mesure de retourner un entier indiquant le nombre de tours complets effectués lors de cette rotation.
+ * Nous retournerons une valeur du nombre de tours conservant le signe de la rotation, autrement dit, -745° équivaut à -2 tours complets.
  *
- * Matérialiser ces 2 mouvements (rotation et révolution) à l'aide de méthodes, ajouter dans le corps de ces méthodes un affichage :
+ * Faites tourner à nouveau Neptune autour de son étoile mais désormais de -3542°.
+ * Toutes les planètes du système solaire tournent autour du soleil dans le sens inverse des aiguilles d'une montre.
  *
- *   Pour la révolution : Je suis la planète <Nom de la planète> et je tourne autour de mon étoile.
+ * Faites tourner Mars autour d'elle-même de -684°, Mars tourne sur elle-même dans le sens inverse des aiguilles d'une montre.
  *
- *   Pour la rotation : Je suis la planète <Nom de la planète> et je tourne sur moi-même. 
+ * Faites également tourner Vénus, la seule planète du système solaire à tourner sur elle-même dans le sens des aiguilles d'une montre de 1250°.
+ * 
+ * A chaque fois, affichez à partir du main le nombre de tours complets réalisés avec la syntaxe suivante :
  *
+ *     Neptune a effectué -9 tours complets autour de son étoile.
  *
- * Faites ensuite tourner neptune autour de son étoile et mars autour d'elle-même en invoquant leur méthodes respectives dans le main .
- *
- * Note : Afin que la vérification de la solution depuis la plate-forme Udemy puisse s’exécuter avec succès, 
- * vous devrez utiliser le nom de variable nom pour le nom de la planète.
+ * Note : Afin que la vérification de la solution depuis la plate-forme Udemy puisse s’exécuter avec succès, vous devrez utiliser les noms de méthode : rotation  et revolution
  */
  
 
@@ -80,9 +81,13 @@ public class HelloUniverse {
         Planete planeteNeuf = new Planete();
         System.out.println(planeteNeuf.nom + " est une planète " + planeteNeuf.matiere + " avec un diamètre de " + planeteNeuf.diametre + " kilomètres.");
 
-        neptune.revolution();
-        mars.rotation();
+        System.out.println(neptune.nom + " a effectué " + neptune.revolution(-745) + " tours complets autour de son étoile.");
+        
+        System.out.println(mars.nom + " a effectué " + mars.rotation(-684) + " tours complets sur elle-même.");
 
+        System.out.println(neptune.nom + " a effectué " + neptune.revolution(-3542) + " tours complets autour de son étoile.");
+
+        System.out.println(venus.nom + " a effectué " + venus.rotation(1250) + " tours complets sur elle-même.");
     }
 }
     
