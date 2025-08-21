@@ -1,26 +1,25 @@
 /**
- * Indiquer l'angle de rotation - ajouter des arguments et obtenir une valeur de retour
+ * Accueillir des engins spatiaux - Surcharge de méthode
  *
- * Les méthodes que nous venons de créer indiquent qu'une rotation est en cours. Améliorons ces méthodes afin d'indiquer maintenant l'angle de rotation. 
- * Cet angle peut être positif ou négatif, signifiant le sens de rotation.
+ * Il est temps d'aller rendre visite à nos planètes. Nous sommes en 2156, et nous allons comptabiliser le nombre d'être humains qui aura posé le pied sur la planète.
  *
- * Il peut également dépasser les 360° indiquant que nous souhaitons une rotation de plus d'un tour.
+ * Le nombre total sera matérialisé par une nouvelle propriété totalVisiteurs  de type int  qui a bien évidemment comme valeur de départ 0.
  *
- * Les méthodes devront également être en mesure de retourner un entier indiquant le nombre de tours complets effectués lors de cette rotation.
- * Nous retournerons une valeur du nombre de tours conservant le signe de la rotation, autrement dit, -745° équivaut à -2 tours complets.
+ * Deux nouvelles méthodes nommées accueillirVaisseau  ayant exactement le même nom et ne retournant rien,  vont permettre d'accueillir de nouveaux humains, et par conséquent incrémenter la propriété ajoutée un peu plus tôt. 
  *
- * Faites tourner à nouveau Neptune autour de son étoile mais désormais de -3542°.
- * Toutes les planètes du système solaire tournent autour du soleil dans le sens inverse des aiguilles d'une montre.
+ *   La première prendra en paramètre le nombre de nouveaux humains arrivés avec le vaisseau
  *
- * Faites tourner Mars autour d'elle-même de -684°, Mars tourne sur elle-même dans le sens inverse des aiguilles d'une montre.
+ *   La seconde, surchargeant donc la 1ère, prendra en paramètre une chaîne de caractère valant :
  *
- * Faites également tourner Vénus, la seule planète du système solaire à tourner sur elle-même dans le sens des aiguilles d'une montre de 1250°.
- * 
- * A chaque fois, affichez à partir du main le nombre de tours complets réalisés avec la syntaxe suivante :
+ *       Soit "CHASSEUR", ce qui équivaut à 3 êtres humains
  *
- *     Neptune a effectué -9 tours complets autour de son étoile.
+ *       Soit "FREGATE", ce qui équivaut à 12 êtres humains
  *
- * Note : Afin que la vérification de la solution depuis la plate-forme Udemy puisse s’exécuter avec succès, vous devrez utiliser les noms de méthode : rotation  et revolution
+ *        Soit "CROISEUR", ce qui équivaut à 50 êtres humains
+ *
+ * Dans le main , faites accoster sur Mars un convoi de 8 êtres humains, suivi d'une Frégate. Affichez ensuite le nombre d'être humains finalement comptabilisés sur Mars sous la forme :
+ *
+ *       Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de 20.
  */
  
 
