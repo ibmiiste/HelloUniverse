@@ -5,7 +5,8 @@
  *
  * Le nombre total sera matérialisé par une nouvelle propriété totalVisiteurs  de type int  qui a bien évidemment comme valeur de départ 0.
  *
- * Deux nouvelles méthodes nommées accueillirVaisseau  ayant exactement le même nom et ne retournant rien,  vont permettre d'accueillir de nouveaux humains, et par conséquent incrémenter la propriété ajoutée un peu plus tôt. 
+ * Deux nouvelles méthodes nommées accueillirVaisseau  ayant exactement le même nom et ne retournant rien,  vont permettre d'accueillir de nouveaux humains, 
+ * et par conséquent incrémenter la propriété ajoutée un peu plus tôt. 
  *
  *   La première prendra en paramètre le nombre de nouveaux humains arrivés avec le vaisseau
  *
@@ -87,6 +88,10 @@ public class HelloUniverse {
         System.out.println(neptune.nom + " a effectué " + neptune.revolution(-3542) + " tours complets autour de son étoile.");
 
         System.out.println(venus.nom + " a effectué " + venus.rotation(1250) + " tours complets sur elle-même.");
+
+        mars.accueillirVaisseau(8);
+        mars.accueillirVaisseau("FREGATE");
+        System.out.println("Le nombre d'humains ayant déjà séjourné sur " + mars.nom + " est actuellement de " + mars.totalVisiteurs + ".");
     }
 }
     
