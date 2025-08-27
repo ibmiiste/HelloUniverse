@@ -5,8 +5,8 @@ public class Planete {
     String nom;
     String matiere;
     long diametre;
-    int totalVisiteurs;   
-
+    int totalVisiteurs;
+    Atmosphere atmosphere;
 
     int revolution(int angle) {
         int nombreTour;

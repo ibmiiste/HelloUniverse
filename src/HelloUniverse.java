@@ -1,26 +1,53 @@
 /**
- * Accueillir des engins spatiaux - Surcharge de méthode
+ * Atmosphère de la planète - Utiliser des propriétés sous forme d'objet
  *
- * Il est temps d'aller rendre visite à nos planètes. Nous sommes en 2156, et nous allons comptabiliser le nombre d'être humains qui aura posé le pied sur la planète.
+ * Nous avons indiqué si la planète était solide (tellurique) ou gazeuse, 
+ * il est temps d'aller un peu plus loin en étudiant la composition de son atmosphère.
  *
- * Le nombre total sera matérialisé par une nouvelle propriété totalVisiteurs  de type int  qui a bien évidemment comme valeur de départ 0.
+ * Nous allons créer une nouvelle classe Atmosphere  qui se définit par les propriétés suivantes :
  *
- * Deux nouvelles méthodes nommées accueillirVaisseau  ayant exactement le même nom et ne retournant rien,  vont permettre d'accueillir de nouveaux humains, 
- * et par conséquent incrémenter la propriété ajoutée un peu plus tôt. 
+ *   Taux d'hydrogène en % : float 
  *
- *   La première prendra en paramètre le nombre de nouveaux humains arrivés avec le vaisseau
+ *   Taux de méthane en % :float 
  *
- *   La seconde, surchargeant donc la 1ère, prendra en paramètre une chaîne de caractère valant :
+ *   Taux d'azote en % : float 
  *
- *       Soit "CHASSEUR", ce qui équivaut à 3 êtres humains
+ *   Taux d'hélium en % : float 
  *
- *       Soit "FREGATE", ce qui équivaut à 12 êtres humains
+ *   Taux d'argon en % : float 
  *
- *        Soit "CROISEUR", ce qui équivaut à 50 êtres humains
+ *   Taux de dioxyde de carbone en % : float 
  *
- * Dans le main , faites accoster sur Mars un convoi de 8 êtres humains, suivi d'une Frégate. Affichez ensuite le nombre d'être humains finalement comptabilisés sur Mars sous la forme :
+ *   Taux de sodium en % : float 
  *
- *       Le nombre d'humains ayant déjà séjourné sur Mars est actuellement de 20.
+ * Ajoutez à la classe Planete une propriété de type Atmosphere et valorisez l'atmosphère de la planète Uranus.
+ *
+ * Affichez dans le main  la composition de l'atmosphère d'Uranus sous la forme :
+ *
+ *   L'atmosphère de Uranus est composée :
+ *       A X% d'hydrogène
+ *
+ *       A X% d'argon
+ *
+ *       A X% de dioxyde de carbone
+ *
+ *       A X% d'azote
+ *
+ *       A X% d'hélium
+ *
+ *       A X% de méthane
+ *
+ *       A X% de sodium
+ *
+ * Uranus est composée :
+ *
+ *       D'hydrogène à 83%
+ *
+ *      D'hélium à 15%
+ *
+ *      De méthane à 2.5%
+ *
+ * Si vous souhaitez effectuer le même travail pour l'ensemble des planètes, voici un super lien: Composition de l'atmosphère des planètes
  */
  
 
@@ -67,6 +94,10 @@ public class HelloUniverse {
         uranus.nom = "uranus";
         uranus.matiere = "Gazeuse";
         uranus.diametre = 51118;
+        uranus.atmosphere = new Atmosphere();
+        uranus.atmosphere.hydrogene = 83f;
+        uranus.atmosphere.helium = 15f;
+        uranus.atmosphere.methane = 2.5f;
 
         Planete neptune = new Planete();
         neptune.nom = "neptune";
@@ -92,6 +123,11 @@ public class HelloUniverse {
         mars.accueillirVaisseau(8);
         mars.accueillirVaisseau("FREGATE");
         System.out.println("Le nombre d'humains ayant déjà séjourné sur " + mars.nom + " est actuellement de " + mars.totalVisiteurs + ".");
+
+        System.out.println("L'atmosphère de " + uranus.nom + " est composée :");
+        System.out.println("   D'hydrogène à " + uranus.atmosphere.hydrogene + "%");
+        System.out.println("   D'hélium à " + uranus.atmosphere.helium + "%");
+        System.out.println("   De méthane à " + uranus.atmosphere.methane + "%");
     }
 }
     
