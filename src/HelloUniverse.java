@@ -1,54 +1,43 @@
 /**
- * Atmosphère de la planète - Utiliser des propriétés sous forme d'objet
+ * La classe Vaisseau - Une méthode qui référence des objets
  *
- * Nous avons indiqué si la planète était solide (tellurique) ou gazeuse, 
- * il est temps d'aller un peu plus loin en étudiant la composition de son atmosphère.
+ * Les méthodes qui permettent à la planète d'accueillir un vaisseau recevaient en paramètre :
+
+ *    Soit le nombre de passagers
+
+ *    Soit le type de Vaisseau
  *
- * Nous allons créer une nouvelle classe Atmosphere  qui se définit par les propriétés suivantes :
+ * Nous allons fusionner ces 2 méthodes en une seule qui va maintenant réellement 
+ * recevoir en paramètre un objet de type Vaisseau. On considérera que le type du  Vaisseau (CROISEUR etc...) 
+ * est maintenant une propriété de Vaisseau mais que celle ci ne détermine plus automatiquement le nombre de passagers. 
+ * La classe Vaisseau disposera  également d'une nouvelle propriété de type int pour le nombre de passagers 
+ * 
+ * 
+ * IMPORTANT : Il n'est pas prévu pour le moment que nos planètes puissent accueillir les vaisseaux en nombre illimité. 
+ * C'est le début de la conquête spatiale, les planètes ne disposent que d'une seule baie d'accostage. 
+ * Autrement dit, si un vaisseau est déjà présent, il va devoir au préalable s'en aller.
+ * 
+ * La méthode qui permet d'accueillir le vaisseau devra également retourner le vaisseau en partance s'il existe. 
+ * Pour que cela soit possible, la Planète devra disposer d'une propriété pour stocker le Vaisseau actuellement accosté.
+ * 
+ * 
+ * Faites accoster sur Mars une Frégate de 9 passagers puis un Croiseur de 42 passagers.
  *
- *   Taux d'hydrogène en % : float 
+ * A chaque fois, indiquez si en arrivant, le nouveau vaisseau à remplacé 
+ * un autre vaisseau déjà présent en affichant le type du vaisseau en partance sous la forme :
  *
- *   Taux de méthane en % :float 
+ *         Aucun vaisseau ne s'en va.
  *
- *   Taux d'azote en % : float 
+ * ou
+ * 
+ *        Un vaisseau de type X doit s'en aller.
  *
- *   Taux d'hélium en % : float 
+ * A la fin du programme affichez toujours le nombre de visiteurs ayant déjà posé le pied sur la planète sous la forme :
  *
- *   Taux d'argon en % : float 
+ *       Le nombre d'humains ayant déjà séjourné sur X est actuellement de Y.
  *
- *   Taux de dioxyde de carbone en % : float 
- *
- *   Taux de sodium en % : float 
- *
- * Ajoutez à la classe Planete une propriété de type Atmosphere et valorisez l'atmosphère de la planète Uranus.
- *
- * Affichez dans le main  la composition de l'atmosphère d'Uranus sous la forme :
- *
- *   L'atmosphère de Uranus est composée :
- *       A X% d'hydrogène
- *
- *       A X% d'argon
- *
- *       A X% de dioxyde de carbone
- *
- *       A X% d'azote
- *
- *       A X% d'hélium
- *
- *       A X% de méthane
- *
- *       A X% de sodium
- *
- * Uranus est composée :
- *
- *       D'hydrogène à 83%
- *
- *      D'hélium à 15%
- *
- *      De méthane à 2.5%
- *
- * Si vous souhaitez effectuer le même travail pour l'ensemble des planètes, voici un super lien: Composition de l'atmosphère des planètes
- */
+ * Note : Afin que la vérification de la solution depuis la plate-forme Udemy puisse s’exécuter avec succès, 
+ * vous devrez utiliser les noms de variable : type  et nbPassagers  dans la classe Vaisseau */
  
 
 public class HelloUniverse {
@@ -120,8 +109,24 @@ public class HelloUniverse {
 
         System.out.println(venus.nom + " a effectué " + venus.rotation(1250) + " tours complets sur elle-même.");
 
-        mars.accueillirVaisseau(8);
-        mars.accueillirVaisseau("FREGATE");
+        Vaisseau fregate = new Vaisseau();
+        fregate.nbPassagers=9;
+        fregate.type="FREGATE";
+
+        Vaisseau vaisseauSEnva=mars.accueillirVaisseau(fregate);
+      
+
+        System.out.println("Le nombre d'humains ayant déjà séjourné sur " + mars.nom + " est actuellement de " + mars.totalVisiteurs + ".");
+
+        
+
+        Vaisseau croiseur = new Vaisseau();
+        croiseur.nbPassagers=42;
+        croiseur.type="CROISEUR";
+
+        vaisseauSEnva=mars.accueillirVaisseau(croiseur);
+ 
+
         System.out.println("Le nombre d'humains ayant déjà séjourné sur " + mars.nom + " est actuellement de " + mars.totalVisiteurs + ".");
 
         System.out.println("L'atmosphère de " + uranus.nom + " est composée :");
@@ -129,5 +134,6 @@ public class HelloUniverse {
         System.out.println("   D'hélium à " + uranus.atmosphere.helium + "%");
         System.out.println("   De méthane à " + uranus.atmosphere.methane + "%");
     }
-}
+ }
+
     
