@@ -1,43 +1,18 @@
 /**
- * La classe Vaisseau - Une méthode qui référence des objets
+ * La forme des planètes - Une propriété statique
  *
- * Les méthodes qui permettent à la planète d'accueillir un vaisseau recevaient en paramètre :
-
- *    Soit le nombre de passagers
-
- *    Soit le type de Vaisseau
+ * Ajouter à la classe Planete  une propriété forme, de type String .
  *
- * Nous allons fusionner ces 2 méthodes en une seule qui va maintenant réellement 
- * recevoir en paramètre un objet de type Vaisseau. On considérera que le type du  Vaisseau (CROISEUR etc...) 
- * est maintenant une propriété de Vaisseau mais que celle ci ne détermine plus automatiquement le nombre de passagers. 
- * La classe Vaisseau disposera  également d'une nouvelle propriété de type int pour le nombre de passagers 
- * 
- * 
- * IMPORTANT : Il n'est pas prévu pour le moment que nos planètes puissent accueillir les vaisseaux en nombre illimité. 
- * C'est le début de la conquête spatiale, les planètes ne disposent que d'une seule baie d'accostage. 
- * Autrement dit, si un vaisseau est déjà présent, il va devoir au préalable s'en aller.
- * 
- * La méthode qui permet d'accueillir le vaisseau devra également retourner le vaisseau en partance s'il existe. 
- * Pour que cela soit possible, la Planète devra disposer d'une propriété pour stocker le Vaisseau actuellement accosté.
- * 
- * 
- * Faites accoster sur Mars une Frégate de 9 passagers puis un Croiseur de 42 passagers.
+ * Sa valeur sera "Sphérique" et valable pour l'ensemble des instances.
  *
- * A chaque fois, indiquez si en arrivant, le nouveau vaisseau à remplacé 
- * un autre vaisseau déjà présent en affichant le type du vaisseau en partance sous la forme :
+ * Afficher la forme d'une Planète en général et de Mars en particulier avec la syntaxe suivante :
  *
- *         Aucun vaisseau ne s'en va.
+ *     La forme d'une planète est : Y
  *
- * ou
- * 
- *        Un vaisseau de type X doit s'en aller.
+ *     La forme de X est : Y
  *
- * A la fin du programme affichez toujours le nombre de visiteurs ayant déjà posé le pied sur la planète sous la forme :
- *
- *       Le nombre d'humains ayant déjà séjourné sur X est actuellement de Y.
- *
- * Note : Afin que la vérification de la solution depuis la plate-forme Udemy puisse s’exécuter avec succès, 
- * vous devrez utiliser les noms de variable : type  et nbPassagers  dans la classe Vaisseau */
+ * Note : Afin que la vérification de la solution depuis la plate-forme Udemy puisse s’exécuter avec succès, vous devrez utiliser le nom de variable  forme  dans la classe Planete
+*/
  
 
 public class HelloUniverse {
@@ -133,6 +108,9 @@ public class HelloUniverse {
         System.out.println("   D'hydrogène à " + uranus.atmosphere.hydrogene + "%");
         System.out.println("   D'hélium à " + uranus.atmosphere.helium + "%");
         System.out.println("   De méthane à " + uranus.atmosphere.methane + "%");
+
+        System.out.println("La forme d'une planète est : " + Planete.forme);
+        System.out.println("La forme de " + mars.nom + " est : " + mars.forme);
     }
  }
 

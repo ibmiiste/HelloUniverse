@@ -8,6 +8,7 @@ public class Planete {
     int totalVisiteurs;
     Atmosphere atmosphere;
     Vaisseau vaisseauAccoste;
+    static String forme = "Sphérique";
 
     int revolution(int angle) {
         int nombreTour;
