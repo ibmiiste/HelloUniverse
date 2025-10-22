@@ -39,4 +39,15 @@ public class Planete {
         
         return vaisseauEnPartance;
     }
+
+    static String expansion(double distance) {
+        String message;
+        if (distance < 14) {
+            message = "Oh la la mais c'est super rapide !";
+        }
+        else {
+            message = "Je rêve ou c'est plus rapide que la lumière ?";
+        }
+        return message;
+     }
 }
